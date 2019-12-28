@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Blog of Gabor Kevin Barta</title>
-    <link>https://gaborkevinbarta.com/tags/</link>
+    <link>https://gaborkevinbarta.com/blog/docs/tags/</link>
     <description>Recent content in Tags on Blog of Gabor Kevin Barta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Dec 2019 21:58:06 +0100</lastBuildDate>
     
-	<atom:link href="https://gaborkevinbarta.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaborkevinbarta.com/blog/docs/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>css</title>
-      <link>https://gaborkevinbarta.com/tags/css/</link>
+      <link>https://gaborkevinbarta.com/blog/docs/tags/css/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/tags/css/</guid>
+      <guid>https://gaborkevinbarta.com/blog/docs/tags/css/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>https://gaborkevinbarta.com/tags/html/</link>
+      <link>https://gaborkevinbarta.com/blog/docs/tags/html/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/tags/html/</guid>
+      <guid>https://gaborkevinbarta.com/blog/docs/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://gaborkevinbarta.com/tags/markdown/</link>
+      <link>https://gaborkevinbarta.com/blog/docs/tags/markdown/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/tags/markdown/</guid>
+      <guid>https://gaborkevinbarta.com/blog/docs/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://gaborkevinbarta.com/tags/themes/</link>
+      <link>https://gaborkevinbarta.com/blog/docs/tags/themes/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/tags/themes/</guid>
+      <guid>https://gaborkevinbarta.com/blog/docs/tags/themes/</guid>
       <description></description>
     </item>
     

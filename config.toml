@@ -1,4 +1,4 @@
-baseURL = "https://gaborkevinbarta.com/"
+baseURL = "https://gaborkevinbarta.com/blog/docs/"
 publishDir = "docs"
 languageCode = "en-us"
 title = "Blog of Gabor Kevin Barta"

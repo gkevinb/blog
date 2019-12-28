@@ -1,0 +1,44 @@
+baseURL = "https://gaborkevinbarta.com/"
+publishDir = "docs"
+languageCode = "en-us"
+title = "Blog of Gabor Kevin Barta"
+theme = "hugo-notepadium"
+
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+logo = ""  # if you have a logo png
+# slogan = "100% JavaScript-free"
+license = ""  # CC License
+
+[params.math]
+enable = false  # optional: true, false. Enable globally, default: false, you can always enable math on per page.
+use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "dracula"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+webFonts = true  # builtin: 'Source Code Pro'
+
+[params.nav]
+showCategories = true       # /categories/
+showTags = true             # /tags/
+
+# custom navigation items
+
+# [[params.nav.custom]]
+# title = "About"
+# url = "/about"
+
+[[params.nav.custom]]
+title = "Home Page"
+url = "https://gaborkevinbarta.com/"

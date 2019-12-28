@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Blog of Gabor Kevin Barta</title>
-    <link>https://gaborkevinbarta.com/blog/docs/categories/</link>
+    <link>https://gaborkevinbarta.com/blog/categories/</link>
     <description>Recent content in Categories on Blog of Gabor Kevin Barta</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 28 Dec 2019 21:58:06 +0100</lastBuildDate>
     
-	<atom:link href="https://gaborkevinbarta.com/blog/docs/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gaborkevinbarta.com/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>syntax</title>
-      <link>https://gaborkevinbarta.com/blog/docs/categories/syntax/</link>
+      <link>https://gaborkevinbarta.com/blog/categories/syntax/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/blog/docs/categories/syntax/</guid>
+      <guid>https://gaborkevinbarta.com/blog/categories/syntax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://gaborkevinbarta.com/blog/docs/categories/themes/</link>
+      <link>https://gaborkevinbarta.com/blog/categories/themes/</link>
       <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/blog/docs/categories/themes/</guid>
+      <guid>https://gaborkevinbarta.com/blog/categories/themes/</guid>
       <description></description>
     </item>
     

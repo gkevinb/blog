@@ -11,7 +11,8 @@
   box-sizing: border-box;
 }
 html {
-  font-family: -system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, SimHei, 'Segoe UI', Roboto, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, SimHei, "Segoe UI", Roboto,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 17px;
   font-weight: 400;
   line-height: 1.7;
@@ -127,7 +128,7 @@ pre,
 tt,
 kbd,
 samp {
-  font-family: 'Source Code Pro', Menlo, Consolas, 'Liberation Mono', monospace;
+  font-family: "Source Code Pro", Menlo, Consolas, "Liberation Mono", monospace;
   font-weight: 500;
 }
 
@@ -157,7 +158,7 @@ samp {
   padding: 2px 4px;
   border-radius: 3px;
   color: #c7254e;
-  background-color: rgba(199,37,78,.05);
+  background-color: rgba(199, 37, 78, 0.05);
 }
 
 kbd {
@@ -188,12 +189,13 @@ table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-td, th {
+td,
+th {
   padding: 0;
 }
 
 a {
-  color: rgb(0,122,255);
+  color: rgb(0, 122, 255);
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -277,6 +279,7 @@ strong {
 }
 
 .site-name {
+  font-size: 32px;
   display: inline-block;
   font-weight: 600;
   vertical-align: middle;
@@ -309,14 +312,14 @@ strong {
   font-weight: 600;
   position: relative;
   color: #f25022;
-  background-color: rgba(242,80,34,.05);
+  background-color: rgba(242, 80, 34, 0.05);
   border-radius: 3px;
 }
 .site-tag:hover,
 .site-tag:focus,
 .site-tag:active {
   text-decoration: none;
-  background-color: rgba(242,80,34,.5);
+  background-color: rgba(242, 80, 34, 0.5);
 }
 
 .flex-body {
@@ -359,7 +362,7 @@ strong {
 .note:hover,
 .note:focus,
 .note:active {
-  opacity: .5;
+  opacity: 0.5;
   text-decoration: none;
 }
 
@@ -413,22 +416,22 @@ strong {
   border-radius: 3px;
 }
 .article-tag {
-  background-color: rgba(0,122,255,.05);
+  background-color: rgba(0, 122, 255, 0.05);
 }
 .article-tag:hover,
 .article-tag:focus,
 .article-tag:active {
-  background-color: rgba(0,122,255,.5);
+  background-color: rgba(0, 122, 255, 0.5);
   text-decoration: none;
 }
 .article-category {
   color: rgb(58, 140, 66);
-  background-color: rgba(58,140,66,.05);
+  background-color: rgba(58, 140, 66, 0.05);
 }
 .article-category:hover,
 .article-category:focus,
 .article-category:active {
-  background-color: rgba(58,140,66,.5);
+  background-color: rgba(58, 140, 66, 0.5);
   text-decoration: none;
 }
 .article-labels,
@@ -470,7 +473,7 @@ strong {
 .article-category .hashtag,
 .article-tag .hashtag {
   font-weight: 700;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .pagination {
@@ -492,19 +495,19 @@ strong {
 }
 
 .pagination ul li a {
-  color: rgb(0,122,255);
+  color: rgb(0, 122, 255);
   float: left;
   padding: 8px 16px;
   text-decoration: none;
 }
 
 .pagination ul li a.active {
-  background-color: rgb(0,122,255);
+  background-color: rgb(0, 122, 255);
   color: #fff;
 }
 
 .pagination ul li a:hover:not(.active) {
-  background-color: rgba(0,122,255,.5);
+  background-color: rgba(0, 122, 255, 0.5);
 }
 
 .markdown-body {
@@ -627,7 +630,7 @@ strong {
 .markdown-body figure > img {
   margin: 0;
   border-radius: 8px;
-  border: 1px solid rgba(0,0,0,.15);
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .markdown-body .image-container .caption .title,
@@ -729,7 +732,7 @@ strong {
   padding: 0;
   overflow: visible;
   cursor: default;
-  
+
   /* Prevent selection */
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -753,7 +756,7 @@ strong {
     background-color: #1c1c1e;
   }
   mark {
-    background-color: #515B70;
+    background-color: #515b70;
   }
   body,
   pre,
@@ -777,55 +780,57 @@ strong {
     color: #ebebf5;
   }
   .markdown-body {
-    color: rgba(235, 235, 245, .6);
+    color: rgba(235, 235, 245, 0.6);
   }
-  .markdown-body h1, .markdown-body h2 {
-    border-bottom-color: rgba(84, 84, 88, .6);
+  .markdown-body h1,
+  .markdown-body h2 {
+    border-bottom-color: rgba(84, 84, 88, 0.6);
   }
   pre,
-  .note-imgs>img,
+  .note-imgs > img,
   .markdown-body table td,
   .markdown-body table th {
-    border-color: rgba(84, 84, 88, .6);
+    border-color: rgba(84, 84, 88, 0.6);
   }
   a {
-    color: rgb(10,132,255);
+    color: rgb(10, 132, 255);
   }
   .pagination ul li a {
-    color: rgb(10,132,255);
+    color: rgb(10, 132, 255);
   }
   .pagination ul li a.active {
-    background-color: rgb(10,132,255);
+    background-color: rgb(10, 132, 255);
   }
   .pagination ul li a:hover:not(.active) {
-    background-color: rgba(10,132,255,.5);
+    background-color: rgba(10, 132, 255, 0.5);
   }
   .article-tag {
-    background-color: rgba(10,132,255,.05);
+    background-color: rgba(10, 132, 255, 0.05);
   }
   .article-tag:hover,
   .article-tag:focus,
   .article-tag:active {
-    background-color: rgba(10,132,255,.5);
+    background-color: rgba(10, 132, 255, 0.5);
   }
   .article-category {
     color: rgb(114, 240, 126);
-    background-color: rgba(114,240,126,.05);
+    background-color: rgba(114, 240, 126, 0.05);
   }
   .article-category:hover,
   .article-category:focus,
   .article-category:active {
-    background-color: rgba(114,240,126,.5);
+    background-color: rgba(114, 240, 126, 0.5);
   }
   .note-list li {
-    border-bottom-color: rgba(84, 84, 88, .6);
+    border-bottom-color: rgba(84, 84, 88, 0.6);
   }
-  .markdown-body .image-container .caption .title, .markdown-body figcaption>h4 {
-    border-bottom-color: rgba(84, 84, 88, .6);
+  .markdown-body .image-container .caption .title,
+  .markdown-body figcaption > h4 {
+    border-bottom-color: rgba(84, 84, 88, 0.6);
   }
   .article-discussion {
-    border-top-color: rgba(84, 84, 88, .6);
-    border-bottom-color: rgba(84, 84, 88, .6);
+    border-top-color: rgba(84, 84, 88, 0.6);
+    border-bottom-color: rgba(84, 84, 88, 0.6);
   }
 }
 @media (max-width: 375px) {

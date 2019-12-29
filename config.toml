@@ -1,7 +1,7 @@
 baseURL = "https://gaborkevinbarta.com/blog/"
 publishDir = "docs"
 languageCode = "en-us"
-title = "Blog of Gabor Kevin Barta"
+title = "Gabor Kevin Barta's Blog"
 theme = "hugo-notepadium"
 
 hasCJKLanguage = true
@@ -29,6 +29,10 @@ theme = "dracula"
 darkTheme = "xcode-dark"  # apply this theme in dark mode
 webFonts = true  # builtin: 'Source Code Pro'
 
+[[params.nav.custom]]
+title = "All Posts"
+url = "/"
+
 [params.nav]
 showCategories = true       # /categories/
 showTags = true             # /tags/
@@ -39,6 +43,4 @@ showTags = true             # /tags/
 # title = "About"
 # url = "/about"
 
-[[params.nav.custom]]
-title = "Home Page"
-url = "https://gaborkevinbarta.com/"
+

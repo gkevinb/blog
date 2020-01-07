@@ -30,7 +30,7 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 webFonts = true  # builtin: 'Source Code Pro'
 
 [[params.nav.custom]]
-title = "All Posts"
+title = "Posts"
 url = "/"
 
 [params.nav]

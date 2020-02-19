@@ -3,6 +3,7 @@ publishDir = "docs"
 languageCode = "en-us"
 title = "Gabor Kevin Barta's Blog"
 theme = "hugo-notepadium"
+googleAnalytics = "UA-141910422-1"
 
 hasCJKLanguage = true
 enableRobotsTXT = true
@@ -42,5 +43,3 @@ showTags = true             # /tags/
 # [[params.nav.custom]]
 # title = "About"
 # url = "/about"
-
-

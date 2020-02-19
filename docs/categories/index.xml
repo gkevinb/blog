@@ -6,26 +6,17 @@
     <description>Recent content in Categories on Gabor Kevin Barta&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Dec 2019 21:58:06 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 19 Feb 2020 22:30:00 +0100</lastBuildDate>
     
 	<atom:link href="https://gaborkevinbarta.com/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>syntax</title>
-      <link>https://gaborkevinbarta.com/blog/categories/syntax/</link>
-      <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
+      <title>vue-js</title>
+      <link>https://gaborkevinbarta.com/blog/categories/vue-js/</link>
+      <pubDate>Wed, 19 Feb 2020 22:30:00 +0100</pubDate>
       
-      <guid>https://gaborkevinbarta.com/blog/categories/syntax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>themes</title>
-      <link>https://gaborkevinbarta.com/blog/categories/themes/</link>
-      <pubDate>Sat, 28 Dec 2019 21:58:06 +0100</pubDate>
-      
-      <guid>https://gaborkevinbarta.com/blog/categories/themes/</guid>
+      <guid>https://gaborkevinbarta.com/blog/categories/vue-js/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light only"><title>Deploy Vue app to Github Pages&nbsp;&ndash;&nbsp;Gabor Kevin Barta&#39;s Blog</title><link rel="stylesheet" href="/blog/css/core.min.416a4d5bd4b4af419d2928ab6db0f3680239ad19759a432700a4713cffb65621ad79e72c81eb575685b6e26f1c03f0e0.css" integrity="sha384-QWpNW9S0r0GdKSirbbDzaAI5rRl1mkMnAKRxPP&#43;2ViGteecsgetXVoW24m8cA/Dg"><body>
+<div class="base-body max-width"><section id="header" class="header max-body-width"><p><a class="home" href="/blog/"><span class="site-name">Gabor Kevin Barta&#39;s Blog</span></a></p>
+<a href="https://gaborkevinbarta.com">Back to portfolio website</a>
+</section><div class="nav"><ul><li><a class="site-tag" href="/blog/">Posts</a></li><li><a class="site-tag" href="/blog/categories/">Categories</a></li><li><a class="site-tag" href="/blog/tags/">Tags</a></li></ul></div><div id="content" class="flex-body max-body-width"><section class="article-header">
+<h1>Deploy Vue app to Github Pages</h1>
+<p class="article-date">2020-02-19</p>
+</section>
+<article class="markdown-body"><p>A step by step tutorial showing how to deploy a Vue CLI app to Github Pages.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Vue is personally my favorite JavaScript framework. It is intuitive to use and simple in syntax. A good place to showcase your Vue projects is <a href="https://pages.github.com/"target="_blank">Github Pages</a>. If you haven't heard of Github Pages you should definitely check it out. With the help of Github Pages you can deploy frontend side code straight from Github to a website which you can view online. In this tutorial I'll show you how I deploy <a href="https://cli.vuejs.org/"target="_blank">Vue CLI</a> projects to Github Pages.</p>
+<p>Now there is two types of Github Pages sites, user site or project site. Each Github user can only have one user site and its repository must have a specific name: <code>&lt;github-username&gt;.github.io</code>. The user site is typically used as a portfolio page for developers. Then there are project sites which correspond with your other repos, and can be named anything you want. Project sites are mainly used to show documentation or demos for your projects. There are some differences between deploying the user site or project sites, which are explained below. Note, this is not a comprehensive guide on Github Pages or Vue CLI so be sure to look into those topics separately.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://github.com/"target="_blank">Github</a></li>
+<li><a href="https://www.npmjs.com/get-npm"target="_blank">npm</a></li>
+<li><a href="https://cli.vuejs.org/guide/installation.html"target="_blank">Vue-CLI</a></li>
+<li><a href="https://www.npmjs.com/package/copyfiles#install"target="_blank">npm copyfiles</a></li>
+<li><a href="https://www.npmjs.com/package/rimraf#cli"target="_blank">npm rimraf</a></li>
+</ul>
+<h2 id="step-1-create-vue-cli-project">Step 1: Create Vue CLI project</h2>
+<p>Navigate to the directory where you want to create your project. Create a new project using the following Vue CLI command. This setups most of what you need to start developing a web application. Note, this creates a subdirectory with called <code>&lt;project-name&gt;</code> where the project is placed.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">vue create &lt;project-name&gt;
+</code></pre></div><h2 id="step-15-add-vueconfigjs-only-for-project-site">Step 1.5: Add vue.config.js (only for project site)</h2>
+<p>Create a file in the project directory called: <code>vue.config.js</code> and add the following lines as the content of the file. This ensures the build will have the correct paths when sourcing JavaScript and CSS code when deployed to Github Pages.</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">publicPath</span><span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="s1">&#39;production&#39;</span>
+    <span class="o">?</span> <span class="s1">&#39;/&lt;project-name&gt;/&#39;</span>
+    <span class="o">:</span> <span class="s1">&#39;/&#39;</span>
+<span class="p">}</span>
+</code></pre></div><h2 id="step-2-automating-the-build">Step 2: Automating the Build</h2>
+<p>Navigate to your project's <code>package.json</code> file. Add the following scripts to your <code>scripts</code> section. These are called npm scripts which help automate certain task in your project. You should already have the <code>serve</code>, <code>build</code>, and <code>lint</code> scripts by default, and now add the three additional scripts. The two subsections below explain how to automate the build for project sites and for a user site, respectively.</p>
+<h3 id="npm-scripts-for-project-site">Npm scripts (for project site)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="s2">&#34;scripts&#34;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&#34;serve&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service serve&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;build&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service build&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;lint&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service lint&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;copy-dist&#34;</span><span class="o">:</span> <span class="s2">&#34;copyfiles &#39;dist/**/*&#39; &#39;./docs&#39; -u 1&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;clean&#34;</span><span class="o">:</span> <span class="s2">&#34;rimraf dist docs&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;deploy&#34;</span><span class="o">:</span> <span class="s2">&#34;npm run clean &amp;&amp; npm run build &amp;&amp; npm run copy-dist&#34;</span>
+  <span class="p">}</span><span class="p">,</span>
+</code></pre></div><ul>
+<li><code>copy-dist</code> : Copies all the contents from the <code>dist</code> directory (this is your build directory) and copies it to the <code>docs</code> directory. It will automatically create the <code>docs</code> directory as well.</li>
+<li><code>clean</code> : Deletes the contents of the <code>dist</code> and <code>docs</code> directory.</li>
+<li><code>deploy</code> : Run the <code>clean</code>, <code>build</code>, and <code> copy-dist</code> tasks in series</li>
+</ul>
+<h3 id="npm-scripts-for-user-site">Npm scripts (for user site)</h3>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">  <span class="s2">&#34;scripts&#34;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&#34;serve&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service serve&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;build&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service build&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;lint&#34;</span><span class="o">:</span> <span class="s2">&#34;vue-cli-service lint&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;copy-dist&#34;</span><span class="o">:</span> <span class="s2">&#34;copyfiles &#39;dist/**/*&#39; &#39;./&#39; -u 1&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;clean&#34;</span><span class="o">:</span> <span class="s2">&#34;rimraf dist css img js index.html favicon.ico&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;deploy&#34;</span><span class="o">:</span> <span class="s2">&#34;npm run clean &amp;&amp; npm run build &amp;&amp; npm run copy-dist&#34;</span><span class="p">,</span>
+  <span class="p">}</span><span class="p">,</span>
+</code></pre></div><ul>
+<li><code>copy-dist</code> : Copies all the contents from the <code>dist</code> directory (this is your build directory) and copies it to the root directory of the project.</li>
+<li><code>clean</code> : Deletes the contents of the <code>dist</code> and other build artifacts (such as <code>css</code>, <code>js</code>, etc) in the root directory.</li>
+<li><code>deploy</code> : Run the <code>clean</code>, <code>build</code>, and <code> copy-dist</code> tasks in series</li>
+</ul>
+<h3 id="running-the-build">Running the build</h3>
+<p>By running the <code>npm run deploy</code> script, it builds your a production version of you project which is ready to be deployed. In case of a project site, the build is placed in the <code>docs</code> directory. It is important that the build is in the <code>docs</code> directory, since that is where Github Pages looks for the code to deploy. In case of the user site, the build is placed in the root directory of the project. Unfortunately, with the user site case the root directory might get clutter with all the build artifacts, but it has to be located there. Now run the following command to create your build.</p>
+<pre><code>npm run deploy
+</code></pre><h2 id="step-3-create-github-repo">Step 3: Create Github Repo</h2>
+<p>Now we create the Github repository for the Vue project. If you are creating a user site, it is important that you repository is named in a specific way. The repo must be named as such: <code>&lt;github-username&gt;.github.io</code></p>
+<p>If you are making a project site, then create a Github repo and name it <code>&lt;project-name&gt;</code> , the arbitrary project name you have been using througout following this tutorial. It is important the names match exactly with the name in the <code>vue.config.js</code> file, otherwise the website will not find the JavaScript and CSS resources.</p>
+<p>Once you create the Github repo, connect it with your local project and make sure to commit and push all the changes to Github.</p>
+<h2 id="step-4-configure-github-pages">Step 4: Configure Github Pages</h2>
+<p>Go to the settings of your Github repository, and scroll down until you see the Github Pages section. To configure for a user site, you can only choose <code>master branch</code>, so go ahead and choose it. For project sites, choose <code>master branch /docs folder</code>, since that is where we placed the build contents. Also it is a good idea to check in the <code>Enforce HTTPS</code> as well, to add an extra layer of security to your site.</p>
+<p><a target="_blank" rel="noopener noreferrer" href="../githubpages.png"><img class="img" src="../githubpages.png" alt="Github Pages Settings"/></a></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>If you done everyting correctly, then you should be able to access your website on the link stated on the top section of the Github Pages settings. In case you made a user site, the link is <code>https://&lt;github-username&gt;.github.io</code> and if you made a project site, then it is <code>https://&lt;github-username&gt;.github.io/&lt;project-name&gt;/</code>. In my case, I have a configured a custom URL, so the Vue project I made along with this tutorial can be found here: <a href="https://gaborkevinbarta.com/vue-demo/"target="_blank">https://gaborkevinbarta.com/vue-demo/</a></p>
+<p>If you have any questions feel free to contact me at <code>gkevinba@gmail.com</code> and I hope you find my tutorial useful.</p></article><section class="article-labels"><a class="article-category li" href=/blog/categories/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=/blog/tags/github-pages/><span class="hashtag">#</span>github-pages</a><a class="article-tag li" href=/blog/tags/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=/blog/tags/hosting/><span class="hashtag">#</span>hosting</a></section></div><section id="footer" class="footer max-body-width"><p>Gabor Kevin Barta's Blog</p>
+<p><span>Powered by </span><a href="https://gohugo.io">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/">Notepadium</a></p>
+</section></div>
+</body>
+</html>

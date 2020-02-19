@@ -1,15 +1,27 @@
 # Blog
 
-## Build development version
+## Run development version
 
 ```
 hugo server -D
 ```
 
-## Build production version
+## Build development version
 
 ```
 hugo -D
+```
+
+## Run production version
+
+```
+hugo server
+```
+
+## Build production version
+
+```
+hugo
 ```
 
 ## TODO

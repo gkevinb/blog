@@ -35,7 +35,7 @@ Now there is two types of Github Pages sites, user site or project site. Each Gi
 
 ## Step 1: Create Vue CLI project
 
-Navigate to the directory where you want to create your project. Create a new project using the following Vue CLI command. This setups most of what you need to start developing a web application. Note, this creates a subdirectory with called `<project-name>` where the project is placed.
+Navigate to the directory where you want to create your project. Create a new project using the following Vue CLI command. This command sets up most of what you need to start developing your web application. Subsitute `<project-name>` with whatever you would like to call your project. Note, this command creates a subdirectory called `<project-name>` where the project is placed.
 
 ```bash
 vue create <project-name>

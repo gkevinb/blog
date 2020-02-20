@@ -99,7 +99,7 @@ Navigate to your project's `package.json` file. Add the following scripts to you
 
 By running the `npm run deploy` script, it builds your a production version of you project which is ready to be deployed. In case of a project site, the build is placed in the `docs` directory. It is important that the build is in the `docs` directory, since that is where Github Pages looks for the code to deploy. In case of the user site, the build is placed in the root directory of the project. Unfortunately, with the user site case the root directory might get clutter with all the build artifacts, but it has to be located there. Now run the following command to create your build.
 
-```
+```bash
 npm run deploy
 ```
 

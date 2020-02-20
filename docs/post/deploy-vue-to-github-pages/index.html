@@ -75,8 +75,8 @@ if (!doNotTrack) {
 </ul>
 <h3 id="running-the-build">Running the build</h3>
 <p>By running the <code>npm run deploy</code> script, it builds your a production version of you project which is ready to be deployed. In case of a project site, the build is placed in the <code>docs</code> directory. It is important that the build is in the <code>docs</code> directory, since that is where Github Pages looks for the code to deploy. In case of the user site, the build is placed in the root directory of the project. Unfortunately, with the user site case the root directory might get clutter with all the build artifacts, but it has to be located there. Now run the following command to create your build.</p>
-<pre><code>npm run deploy
-</code></pre><h2 id="step-3-create-github-repo">Step 3: Create Github Repo</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">npm run deploy
+</code></pre></div><h2 id="step-3-create-github-repo">Step 3: Create Github Repo</h2>
 <p>Now we create the Github repository for the Vue project. If you are creating a user site, it is important that you repository is named in a specific way. The repo must be named as such: <code>&lt;github-username&gt;.github.io</code></p>
 <p>If you are making a project site, then create a Github repo and name it <code>&lt;project-name&gt;</code> , the arbitrary project name you have been using througout following this tutorial. It is important the names match exactly with the name in the <code>vue.config.js</code> file, otherwise the website will not find the JavaScript and CSS resources.</p>
 <p>Once you create the Github repo, connect it with your local project and make sure to commit and push all the changes to Github.</p>

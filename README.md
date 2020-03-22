@@ -24,6 +24,12 @@ hugo server
 hugo
 ```
 
+## Add new post
+
+```
+hugo new post/new-post.md
+```
+
 ## TODO
 
 - Make sure build is clean, without any old files from previous build

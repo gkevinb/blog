@@ -119,7 +119,7 @@ Once you create the Github repo, connect it with your local project and make sur
 
 Go to the settings of your Github repository, and scroll down until you see the Github Pages section. To configure for a user site, you can only choose `master branch`, so go ahead and choose it. For project sites, choose `master branch /docs folder`, since that is where we placed the build contents. Also it is a good idea to check in the `Enforce HTTPS` as well, to add an extra layer of security to your site.
 
-![Github Pages Settings](../githubpages.png)
+![Github Pages Settings](/img/githubpages.png)
 
 ## Bonus Step: Directly build to docs (only for project site)
 

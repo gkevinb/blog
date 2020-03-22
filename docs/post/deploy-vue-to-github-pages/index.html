@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html><meta charset="utf-8"><meta name="generator" content="Hugo 0.62.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light only"><title>Deploy Vue app to Github Pages&nbsp;&ndash;&nbsp;Gabor Kevin Barta&#39;s Blog</title><link rel="stylesheet" href="/blog/css/core.min.416a4d5bd4b4af419d2928ab6db0f3680239ad19759a432700a4713cffb65621ad79e72c81eb575685b6e26f1c03f0e0.css" integrity="sha384-QWpNW9S0r0GdKSirbbDzaAI5rRl1mkMnAKRxPP&#43;2ViGteecsgetXVoW24m8cA/Dg">
+<meta name="supported-color-schemes" content="light only"><title>Deploy Vue app to Github Pages&nbsp;&ndash;&nbsp;Gabor Kevin Barta&#39;s Blog</title><link rel="stylesheet" href="https://gaborkevinbarta.com/blog/css/core.min.416a4d5bd4b4af419d2928ab6db0f3680239ad19759a432700a4713cffb65621ad79e72c81eb575685b6e26f1c03f0e0.css" integrity="sha384-QWpNW9S0r0GdKSirbbDzaAI5rRl1mkMnAKRxPP&#43;2ViGteecsgetXVoW24m8cA/Dg">
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
@@ -15,9 +15,9 @@ if (!doNotTrack) {
 }
 </script>
 <body>
-<div class="base-body max-width"><section id="header" class="header max-body-width"><p><a class="home" href="/blog/"><span class="site-name">Gabor Kevin Barta&#39;s Blog</span></a></p>
+<div class="base-body max-width"><section id="header" class="header max-body-width"><p><a class="home" href="https://gaborkevinbarta.com/blog/"><span class="site-name">Gabor Kevin Barta&#39;s Blog</span></a></p>
 <a href="https://gaborkevinbarta.com">Back to portfolio website</a>
-</section><div class="nav"><ul><li><a class="site-tag" href="/blog/">Posts</a></li><li><a class="site-tag" href="/blog/categories/">Categories</a></li><li><a class="site-tag" href="/blog/tags/">Tags</a></li></ul></div><div id="content" class="flex-body max-body-width"><section class="article-header">
+</section><div class="nav"><ul><li><a class="site-tag" href="https://gaborkevinbarta.com/blog/">Posts</a></li><li><a class="site-tag" href="https://gaborkevinbarta.com/blog/categories/">Categories</a></li><li><a class="site-tag" href="https://gaborkevinbarta.com/blog/tags/">Tags</a></li></ul></div><div id="content" class="flex-body max-body-width"><section class="article-header">
 <h1>Deploy Vue app to Github Pages</h1>
 <p class="article-date">2020-02-19</p>
 </section>
@@ -82,7 +82,7 @@ if (!doNotTrack) {
 <p>Once you create the Github repo, connect it with your local project and make sure to commit and push all the changes to Github.</p>
 <h2 id="step-4-configure-github-pages">Step 4: Configure Github Pages</h2>
 <p>Go to the settings of your Github repository, and scroll down until you see the Github Pages section. To configure for a user site, you can only choose <code>master branch</code>, so go ahead and choose it. For project sites, choose <code>master branch /docs folder</code>, since that is where we placed the build contents. Also it is a good idea to check in the <code>Enforce HTTPS</code> as well, to add an extra layer of security to your site.</p>
-<p><a target="_blank" rel="noopener noreferrer" href="../githubpages.png"><img class="img" src="../githubpages.png" alt="Github Pages Settings"/></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://gaborkevinbarta.com/blog/img/githubpages.png"><img class="img" src="https://gaborkevinbarta.com/blog/img/githubpages.png" alt="Github Pages Settings"/></a></p>
 <h2 id="bonus-step-directly-build-to-docs-only-for-project-site">Bonus Step: Directly build to docs (only for project site)</h2>
 <p>In case of a project site, one can directly build to a specific output directory by configuring it in the <code>vue.config.js</code> file. Add the <code>outputDir</code> field to the config and specify it to be the <code>docs</code> directory. The configuration file should look as shown below.</p>
 <div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
@@ -94,7 +94,7 @@ if (!doNotTrack) {
 </code></pre></div><p>Now by calling the <code>npm run build</code> command, the production build is then placed directly in the <code>docs</code> directory. This makes the <code>copy-dist</code>, <code>clean</code>, and <code>deploy</code> scripts obsolete, so feel free to delete them.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>If you done everyting correctly, then you should be able to access your website on the link stated on the top section of the Github Pages settings. In case you made a user site, the link is <code>https://&lt;github-username&gt;.github.io</code> and if you made a project site, then it is <code>https://&lt;github-username&gt;.github.io/&lt;project-name&gt;/</code>. In my case, I have a configured a custom URL, so the Vue project I made along with this tutorial can be found here: <a href="https://gaborkevinbarta.com/vue-demo/"target="_blank">https://gaborkevinbarta.com/vue-demo/</a></p>
-<p>If you have any questions feel free to contact me at <code>gkevinba@gmail.com</code> and I hope you find my tutorial useful.</p></article><section class="article-labels"><a class="article-category li" href=/blog/categories/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=/blog/tags/github-pages/><span class="hashtag">#</span>github-pages</a><a class="article-tag li" href=/blog/tags/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=/blog/tags/hosting/><span class="hashtag">#</span>hosting</a></section></div><section id="footer" class="footer max-body-width"><p>Gabor Kevin Barta's Blog</p>
+<p>If you have any questions feel free to contact me at <code>gkevinba@gmail.com</code> and I hope you find my tutorial useful.</p></article><section class="article-labels"><a class="article-category li" href=https://gaborkevinbarta.com/blog/categories/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=https://gaborkevinbarta.com/blog/tags/github-pages/><span class="hashtag">#</span>github-pages</a><a class="article-tag li" href=https://gaborkevinbarta.com/blog/tags/vue-js/><span class="hashtag">#</span>vue-js</a><a class="article-tag li" href=https://gaborkevinbarta.com/blog/tags/hosting/><span class="hashtag">#</span>hosting</a></section></div><section id="footer" class="footer max-body-width"><p>Gabor Kevin Barta's Blog</p>
 <p><span>Powered by </span><a href="https://gohugo.io">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/">Notepadium</a></p>
 </section></div>
 </body>

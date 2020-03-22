@@ -121,6 +121,21 @@ Go to the settings of your Github repository, and scroll down until you see the 
 
 ![Github Pages Settings](../githubpages.png)
 
+## Bonus Step: Directly build to docs (only for project site)
+
+In case of a project site, one can directly build to a specific output directory by configuring it in the `vue.config.js` file. Add the `outputDir` field to the config and specify it to be the `docs` directory. The configuration file should look as shown below.
+
+```javascript
+module.exports = {
+    outputDir: 'docs',
+    publicPath: process.env.NODE_ENV === 'production'
+      ? '/vue-demo/'
+      : '/'
+}
+```
+
+Now by calling the `npm run build` command, the production build is then placed directly in the `docs` directory. This makes the `copy-dist`, `clean`, and `deploy` scripts obsolete, so feel free to delete them.
+
 
 ## Conclusion
 

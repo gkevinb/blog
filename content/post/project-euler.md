@@ -51,18 +51,40 @@ But anything less than a linear complexity is O(1) complexity, meaning it is don
 
 After going through the discussion section for the problem on HackerRank and doing some research online, I've found the optimal way of solving this problem is using the [arithmetic series formula](https://www.mathwords.com/a/arithmetic_series.htm).
 
+<!-- $$
+\sum_{i=1}^{n} a_{i} = \Big(\frac n 2\Big)(a_{1} + a_{n})
+$$ -->
+
 $$
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+\sum_{i=1}^{n} a_{i} = n \Big({a_{1} + a_{n} \above{0.5pt} 2}\Big)
 $$
 
+The formula states that any arithmetic series which has a constant difference between the terms is equal to the number of terms times the mean of the first and last term.
+
+By utilizing the arithmetic series formula, its possible to calculate multiples of number in constant time, O(1). Take the previous example when **N** equals 10. Note the difference between little **n** and big **N**. The multiples of 3 up until 10 is calculated the following way. In the forumala **n** is the number of terms, so how many times the multiple occurs below 10. Since it is below, meaning non-inclusive, subtract 1 and then divide by 3, This equals 3, note to only take the whole number part, no decimals. The number of multipes is 3, the first term is 3 since the first mulitple of any number is itself. The last term is the multipe times the number of multiples, in this case 3 times 3, so 9. Plugging the numbers into the formula, results in the 18, this is the sum of multiple of 3 below 10.
+
+$$
+3 \Big({3 + 9 \above{0.5pt} 2}\Big) = 18
+$$
+
+The number of multiples of 5 can be calculated using the same method.
+
+$$
+1 \Big({5 + 5 \above{0.5pt} 2}\Big) = 5
+$$
+
+The number of multiples of 3 and 5 is just by simple adding 18 and 5 together resulting in 23. The same result as in the example on HackerRank. Now, not so fast, this works in case if **N** equals to 10. But if its a larger number over 15, then we need to consider multiples of 15, since those are counted twice when calculating the number of multiples of 3 and 5. Therefore, at the end you must subtract the number of multipes of 15. The entire algorithm for calculating the multiples of 3 and 5 is shown below.
+
 ```python
-def arithmetic_series(i, n):
-    multiple = (n - 1) // i
-    a1 = i
-    an = i * multiple
-    return multiple * (a1 + an) // 2
+def arithmetic_series(multiple, n):
+    number_of_multiples = (n - 1) // multiple
+    a1 = multiple
+    an = multiple * number_of_multiples
+    return number_of_multiples * (a1 + an) // 2
 
 def solution(n):
     return arithmetic_series(3, n) + arithmetic_series(5, n) 
             - arithmetic_series(15, n)
 ```
+
+So by using this message calculating multiples of 3 and 5 under any number can be done in constant time. With this solution both space and time complexity is kept to a mininum.

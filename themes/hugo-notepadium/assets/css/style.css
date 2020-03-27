@@ -685,7 +685,6 @@ strong {
 .markdown-body .katex-display,
 .markdown-body .MathJax,
 .markdown-body .MathJax_Display {
-  display: inline-block !important;
   font-size: 18px !important;
   width: auto;
   margin: 0;

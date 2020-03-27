@@ -10,6 +10,7 @@ tags: [
 categories: [
     "project-euler",
 ]
+math: true
 ---
 Showcasing the solutions for Project Euler 001 problem.
 <!--more-->
@@ -50,6 +51,9 @@ But anything less than a linear complexity is O(1) complexity, meaning it is don
 
 After going through the discussion section for the problem on HackerRank and doing some research online, I've found the optimal way of solving this problem is using the [arithmetic series formula](https://www.mathwords.com/a/arithmetic_series.htm).
 
+$$
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+$$
 
 ```python
 def arithmetic_series(i, n):

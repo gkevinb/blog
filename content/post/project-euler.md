@@ -87,4 +87,7 @@ def solution(n):
             - arithmetic_series(15, n)
 ```
 
-So by using this message calculating multiples of 3 and 5 under any number can be done in constant time. With this solution both space and time complexity is kept to a mininum.
+So by using this message calculating multiples of 3 and 5 under any number can be done in constant time. With this solution both space and time complexity is kept to a mininum. By running this solution on **HackerRank** all test case pass, meaning this is the optimal solution for solving the problem.
+
+## Conclusion
+

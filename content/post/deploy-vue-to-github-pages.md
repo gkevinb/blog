@@ -25,7 +25,7 @@ Now there is two types of **Github Pages** sites, user site or project site. Eac
 
 ## Prerequisites
 
-Before reading the guide, be familiar with the following tools. You need a **Github** account to deploy to **Github Pages** and be sure you are familiar with atleast the basic concepts of **Vue CLI** and **npm**
+Before reading the guide, be familiar with the following tools. You need a **Github** account to deploy to **Github Pages** and be sure you are familiar with at least the basic concepts of **Vue CLI** and **npm**.
 
 - [Github](https://github.com/)
 - [Vue CLI](https://cli.vuejs.org/guide/installation.html)
